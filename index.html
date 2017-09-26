@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Earthquake and Volcano Data</title>
+
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Earthquake and Volcano Data</h2>
+    <p>Type in the coordinates for your data points. Submit the form when you're finished.</p>
+    <form onsubmit="addMarker();return false;">
+        Latitude:<br>
+        <input type="text" name="latitude" id="latitude"><br>
+        Longitude:<br>
+        <input type="text" name="longitutde" id="longitude"><br><br>
+        <select name="type" id="type">
+            <option value="volcano">Volcano</option>
+            <option value="earthquake">Earthquake</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+
+    <h2>Data Map</h2>
+    <strong><span>Key:&nbsp;&nbsp;&nbsp;</span></strong><img src="/assets/green.png" height="15"><span>&nbsp;Earthquake&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <img src="/assets/red.png" height="15"><span>&nbsp;Volcano</span><br><br><br>
+    <!-- Google Map-->
+    <div id="map"></div>
+
+</body>
+
+
+<script type="text/javascript" src="/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA95Vh7nwogkF-4zSLQJqA46yxnPP8cge4&callback=initMap"
+    type="text/javascript"></script>
+
+</html>
